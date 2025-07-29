@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_pages",
+  "info": {
+    "singularName": "contact-page",
+    "pluralName": "contact-pages",
+    "displayName": "ContactPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "address": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "openingHours": {
+      "type": "string"
+    },
+    "mapEmbed": {
+      "type": "blocks"
+    },
+    "announcement": {
+      "type": "blocks"
+    },
+    "privacyPolicy": {
+      "type": "blocks"
+    },
+    "language": {
+      "type": "enumeration",
+      "enum": [
+        "pl",
+        "en",
+        "de"
+      ]
+    }
+  }
+}

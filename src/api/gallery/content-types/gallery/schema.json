@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "galleries",
+  "info": {
+    "singularName": "gallery",
+    "pluralName": "galleries",
+    "displayName": "Gallery"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "caption": {
+      "type": "string"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "pokoje",
+        "spa",
+        "okolica",
+        "inne"
+      ]
+    },
+    "language": {
+      "type": "enumeration",
+      "enum": [
+        "pl",
+        "en",
+        "de"
+      ]
+    }
+  }
+}

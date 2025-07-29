@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spa_services",
+  "info": {
+    "singularName": "spa-service",
+    "pluralName": "spa-services",
+    "displayName": "SpaService"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "durationMinutes": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "language": {
+      "type": "enumeration",
+      "enum": [
+        "pl",
+        "en",
+        "de"
+      ]
+    }
+  }
+}
