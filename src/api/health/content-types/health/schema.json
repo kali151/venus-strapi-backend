@@ -1,14 +1,19 @@
 {
   "kind": "singleType",
-  "collectionName": "healths",
+  "collectionName": "health_checks",
   "info": {
     "singularName": "health",
     "pluralName": "healths",
-    "displayName": "Health"
+    "displayName": "Health Check",
+    "description": "Simple health check endpoint"
   },
   "options": {
     "draftAndPublish": false
   },
-  "pluginOptions": {},
-  "attributes": {}
+  "attributes": {
+    "status": {
+      "type": "string",
+      "default": "ok"
+    }
+  }
 }
