@@ -1,5 +1,5 @@
-/**
- * health service
- */
-
-export default {};
+export default () => ({
+  getHealth: () => {
+    return { status: "ok" };
+  },
+});

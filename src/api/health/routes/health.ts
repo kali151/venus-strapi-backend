@@ -1,15 +1,13 @@
-/**
- * health router
- */
-
 export default {
   routes: [
     {
       method: "GET",
-      path: "/api/health",
-      handler: "health.check",
+      path: "/health",
+      handler: "health.index",
       config: {
         auth: false,
+        policies: [],
+        middlewares: [],
       },
     },
   ],
