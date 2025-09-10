@@ -476,6 +476,35 @@ export interface ApiGalleryGallery extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiHealthHealth extends Struct.SingleTypeSchema {
+  collectionName: 'health_checks';
+  info: {
+    description: 'Simple health check endpoint';
+    displayName: 'Health Check';
+    pluralName: 'healths';
+    singularName: 'health';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::health.health'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    status: Schema.Attribute.String & Schema.Attribute.DefaultTo<'ok'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPagePage extends Struct.CollectionTypeSchema {
   collectionName: 'pages';
   info: {
@@ -1083,6 +1112,7 @@ declare module '@strapi/strapi' {
       'api::attraction.attraction': ApiAttractionAttraction;
       'api::contact-page.contact-page': ApiContactPageContactPage;
       'api::gallery.gallery': ApiGalleryGallery;
+      'api::health.health': ApiHealthHealth;
       'api::page.page': ApiPagePage;
       'api::room.room': ApiRoomRoom;
       'api::spa-service.spa-service': ApiSpaServiceSpaService;
