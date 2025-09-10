@@ -10,5 +10,15 @@ export default {
         middlewares: [],
       },
     },
+    {
+      method: "GET",
+      path: "/api/health",
+      handler: "health.index",
+      config: {
+        auth: false,
+        policies: [],
+        middlewares: [],
+      },
+    },
   ],
 };
