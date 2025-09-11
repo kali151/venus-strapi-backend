@@ -1,0 +1,89 @@
+{
+  "kind": "collectionType",
+  "collectionName": "special_offers",
+  "info": {
+    "singularName": "special-offer",
+    "pluralName": "special-offers",
+    "displayName": "Special Offer",
+    "description": "Special offers and promotional packages for the hotel"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "shortDescription": {
+      "type": "text",
+      "maxLength": 300
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "originalPrice": {
+      "type": "decimal"
+    },
+    "validFrom": {
+      "type": "date"
+    },
+    "validTo": {
+      "type": "date"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": ["holiday", "seasonal", "spa", "family", "seniors", "weekend"],
+      "default": "seasonal"
+    },
+    "includes": {
+      "type": "json"
+    },
+    "terms": {
+      "type": "richtext"
+    },
+    "contactInfo": {
+      "type": "string"
+    },
+    "language": {
+      "type": "enumeration",
+      "enum": ["pl", "en", "de"],
+      "default": "pl"
+    },
+    "priority": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}
