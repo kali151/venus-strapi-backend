@@ -7,7 +7,14 @@ export default [
       contentSecurityPolicy: false, // Disable CSP for Strapi Admin
     },
   },
-  "strapi::cors",
+  {
+    name: "strapi::cors",
+    config: {
+      enabled: true,
+      headers: "*",
+      origin: ["http://localhost:5173", "https://venus-hotel-spa.web.app", "https://venus-hotel-spa.firebaseapp.com"],
+    },
+  },
   "strapi::poweredBy",
   "strapi::query",
   "strapi::body",
