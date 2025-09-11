@@ -1,3 +1,17 @@
 export default ({ env }) => ({
-  // Default local upload - using Railway volume for persistence
+  // Cloudinary Upload Provider - reliable cloud storage
+  upload: {
+    config: {
+      provider: "cloudinary",
+      providerOptions: {
+        cloud_name: env("CLOUDINARY_NAME"),
+        api_key: env("CLOUDINARY_KEY"),
+        api_secret: env("CLOUDINARY_SECRET"),
+      },
+      actionOptions: {
+        upload: {},
+        delete: {},
+      },
+    },
+  },
 });
