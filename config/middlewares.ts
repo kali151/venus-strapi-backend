@@ -12,7 +12,7 @@ export default [
     config: {
       enabled: true,
       headers: "*",
-      origin: ["http://localhost:5173", "https://venus-hotel-spa.web.app", "https://venus-hotel-spa.firebaseapp.com"],
+      origin: "*", // Allow all origins for now
     },
   },
   "strapi::poweredBy",
