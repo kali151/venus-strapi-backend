@@ -5,6 +5,7 @@
 ### **🔄 Przełączanie przez Railway Dashboard:**
 
 #### **1. 🔗 Otwórz Railway Dashboard:**
+
 https://railway.app/project/venus-strapi-backend
 
 #### **2. ⚙️ Settings → Environment Variables**
@@ -12,18 +13,21 @@ https://railway.app/project/venus-strapi-backend
 #### **3. 🎯 Dodaj/Edytuj zmienne:**
 
 **Dla DEVELOPMENT MODE:**
+
 ```
 NODE_ENV = development
 STRAPI_ADMIN_CLIENT_URL = https://venus-strapi-backend-production.up.railway.app
 ```
 
 **Dla PRODUCTION MODE:**
+
 ```
 NODE_ENV = production
 STRAPI_ADMIN_CLIENT_URL = https://venus-strapi-backend-production.up.railway.app
 ```
 
 #### **4. 🔄 Restart Service:**
+
 - Settings → Restart Service
 - Poczekaj 2-3 minuty na redeploy
 
@@ -32,12 +36,14 @@ STRAPI_ADMIN_CLIENT_URL = https://venus-strapi-backend-production.up.railway.app
 ## 🎯 **KIEDY UŻYWAĆ:**
 
 ### **DEVELOPMENT MODE:**
+
 - ✅ Dodawanie nowych content types
 - ✅ Edycja schematów
 - ✅ Testowanie nowych funkcji
 - ❌ Wolniejszy (nie zoptymalizowany)
 
 ### **PRODUCTION MODE:**
+
 - ✅ Szybszy i stabilniejszy
 - ✅ Zoptymalizowany build
 - ✅ Bezpieczny (nie można edytować schematów)
