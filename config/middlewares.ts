@@ -10,7 +10,6 @@ export default [
   {
     name: "strapi::cors",
     config: {
-      enabled: true,
       headers: "*",
       origin: "*", // Allow all origins for now
     },
