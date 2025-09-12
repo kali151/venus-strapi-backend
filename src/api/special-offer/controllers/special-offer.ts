@@ -1,4 +1,4 @@
-import { factories } from '@strapi/strapi';
+import { factories } from "@strapi/strapi";
 
 export default factories.createCoreController('api::special-offer.special-offer', ({ strapi }) => ({
   // Find all special offers with populated relations

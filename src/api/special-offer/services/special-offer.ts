@@ -1,4 +1,4 @@
-import { factories } from '@strapi/strapi';
+import { factories } from "@strapi/strapi";
 
 export default factories.createCoreService('api::special-offer.special-offer', ({ strapi }) => ({
   // Get active offers with custom logic
