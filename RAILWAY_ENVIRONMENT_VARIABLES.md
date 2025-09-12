@@ -3,6 +3,7 @@
 ## 📋 **WYMAGANE ZMIENNE ŚRODOWISKOWE:**
 
 ### **1. 🔐 Security Variables:**
+
 ```
 ADMIN_JWT_SECRET = your-admin-jwt-secret-here
 API_TOKEN_SALT = your-api-token-salt-here
@@ -11,16 +12,19 @@ ENCRYPTION_KEY = your-encryption-key-here
 ```
 
 ### **2. 🌍 Environment Mode:**
+
 ```
 NODE_ENV = development
 ```
 
 ### **3. 🗄️ Database:**
+
 ```
 DATABASE_URL = postgresql://postgres:password@postgres.railway.internal:5432/railway
 ```
 
 ### **4. ☁️ Cloudinary (Media Storage):**
+
 ```
 CLOUDINARY_NAME = your-cloudinary-name
 CLOUDINARY_KEY = your-cloudinary-key
@@ -28,6 +32,7 @@ CLOUDINARY_SECRET = your-cloudinary-secret
 ```
 
 ### **5. 🚀 Railway Specific:**
+
 ```
 PORT = 1337
 ```
@@ -37,11 +42,13 @@ PORT = 1337
 ## 🎯 **JAK DODAĆ W RAILWAY:**
 
 ### **1. 🔗 Railway Dashboard:**
+
 https://railway.app/project/venus-strapi-backend
 
 ### **2. ⚙️ Settings → Environment Variables**
 
 ### **3. ➕ Add Variable:**
+
 - **Key:** `TRANSFER_TOKEN_SALT`
 - **Value:** `your-transfer-token-salt-here`
 
@@ -52,9 +59,11 @@ https://railway.app/project/venus-strapi-backend
 ## 🔑 **GENEROWANIE SECRETÓW:**
 
 ### **Online Generator:**
+
 https://generate-secret.vercel.app/32
 
 ### **Lub przez Node.js:**
+
 ```bash
 node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
 ```

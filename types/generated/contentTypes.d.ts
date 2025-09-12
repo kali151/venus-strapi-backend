@@ -600,6 +600,49 @@ export interface ApiSpaServiceSpaService extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiSpecialOfferSpecialOffer
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'special_offers';
+  info: {
+    displayName: 'Special Offer';
+    pluralName: 'special-offers';
+    singularName: 'special-offer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    category: Schema.Attribute.String;
+    contactInfo: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos', true>;
+    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    isFeatured: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    language: Schema.Attribute.Enumeration<['pl', 'en', 'de']> &
+      Schema.Attribute.DefaultTo<'pl'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::special-offer.special-offer'
+    > &
+      Schema.Attribute.Private;
+    price: Schema.Attribute.Decimal;
+    priority: Schema.Attribute.Integer;
+    publishedAt: Schema.Attribute.DateTime;
+    shortDescription: Schema.Attribute.String;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    validFrom: Schema.Attribute.Date;
+    validTo: Schema.Attribute.Date;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1116,6 +1159,7 @@ declare module '@strapi/strapi' {
       'api::page.page': ApiPagePage;
       'api::room.room': ApiRoomRoom;
       'api::spa-service.spa-service': ApiSpaServiceSpaService;
+      'api::special-offer.special-offer': ApiSpecialOfferSpecialOffer;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "special_offers",
+  "info": {
+    "singularName": "special-offer",
+    "pluralName": "special-offers",
+    "displayName": "Special Offer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "shortDescription": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "validFrom": {
+      "type": "date"
+    },
+    "validTo": {
+      "type": "date"
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "category": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "language": {
+      "type": "enumeration",
+      "default": "pl",
+      "enum": [
+        "pl",
+        "en",
+        "de"
+      ]
+    },
+    "contactInfo": {
+      "type": "string"
+    }
+  }
+}
